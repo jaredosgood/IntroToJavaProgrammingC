@@ -12,9 +12,9 @@ const char *run(double xC1, double yC1, double rC1,
     if (distance <= rC1 - rC2)
     {
         return "circle2 is inside circle1";
-    } else if (distance <= rC1 + rC2) {
-        return "circle2 overlaps circle1";
-    } else {
-        return "circle2 does not overlap circle1";
     }
+    if (distance <= rC1 + rC2) {
+        return "circle2 overlaps circle1";
+    }
+    return "circle2 does not overlap circle1";
 }
